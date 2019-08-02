@@ -28,6 +28,7 @@ function tick(timestamp) {
     
     stage.map(item => item.draw())
     stage.map(item => item.tick())
+    stage.map(item => item.collide(stage))
 
     fpsCounter.end()
 

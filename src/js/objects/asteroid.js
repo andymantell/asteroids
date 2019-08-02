@@ -54,6 +54,14 @@ class Asteroid {
             this.deltaRotation = -this.deltaRotation
         }
     }
+
+    collide(others) {
+        others.map(item => {
+            if(!item !== this) {
+                // Something.... 
+            }
+        })
+    }
 }
 
 export default Asteroid
