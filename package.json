@@ -26,6 +26,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
     "file-loader": "4.1.0",
+    "url-loader": "2.1.0",
     "govuk-frontend": "3.0.0",
     "govuk-react-components": "LandRegistry/govuk-react-components.git#master",
     "hmlr-design-system": "github:LandRegistry/hmlr-design-system#develop",

@@ -2,6 +2,8 @@
 import {clear} from './utils'
 import ctx from './ctx'
 import Stats from 'stats.js'
+import Asteroid from './objects/asteroid'
+import { canvasWidth, canvasHeight, numberOfAsteroids } from './config';
 
 var fpsCounter = new Stats();
 fpsCounter.showPanel( 0 )
@@ -9,19 +11,27 @@ document.body.appendChild( fpsCounter.dom );
 
 var start = null;
 
+const stage = []
+
+function init() {
+    for(var i=0;i<numberOfAsteroids;i++) {
+        stage.push(new Asteroid(ctx, canvasWidth, canvasHeight))
+    }
+}
+
+init()
+
 function tick(timestamp) {
     fpsCounter.begin()
 
-    if (!start) start = timestamp;
-    var progress = timestamp - start;
-    
     clear(ctx)
+    
+    stage.map(item => item.draw())
+    stage.map(item => item.tick())
 
     fpsCounter.end()
 
-    if (progress < 2000) {
-      window.requestAnimationFrame(tick);
-    }
+    window.requestAnimationFrame(tick);
   }
   
   window.requestAnimationFrame(tick);

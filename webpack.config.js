@@ -83,13 +83,7 @@ const webpackConfig = {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
-            options: {
-              name (file) {
-                const componentName = path.dirname(file).split(path.sep).pop()
-                return `images/hmlr-design-system/${componentName}/[name].[ext]`
-              }
-            }
+            loader: 'file-loader'
           }
         ]
       },
