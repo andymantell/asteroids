@@ -22,8 +22,11 @@ class Asteroid {
 
         this.image = new Image();
         this.image.src = graphic
-        this.imageWidth = this.image.width * this.scale
-        this.imageHeight = this.image.height * this.scale
+
+        this.image.addEventListener('load', () => {
+            this.imageWidth = this.image.width * this.scale
+            this.imageHeight = this.image.height * this.scale
+        })
     }
 
     draw() {
@@ -43,10 +46,12 @@ class Asteroid {
 
         if (this.x >= this.maxX || this.x <= 0) {
             this.deltaX = -this.deltaX
+            this.deltaRotation = -this.deltaRotation
         }
 
         if (this.y >= this.maxY || this.y <= 0) {
             this.deltaY = -this.deltaY
+            this.deltaRotation = -this.deltaRotation
         }
     }
 }
