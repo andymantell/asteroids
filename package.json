@@ -1,8 +1,8 @@
 {
-  "name": "challenge-skeleton",
+  "name": "asteroids",
   "version": "0.0.1",
   "private": true,
-  "homepage": "http://andymantell.github.io/challenge-skeleton",
+  "homepage": "http://andymantell.github.io/asteroids",
   "scripts": {
     "start": "webpack-dev-server --mode development --host 0.0.0.0 --port 3000",
     "build": "webpack",

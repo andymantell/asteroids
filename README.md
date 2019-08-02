@@ -1,6 +1,6 @@
-# Boilerplate for noodling about
+# Asteroids
 
-https://andymantell.github.io/noodling-skeleton/
+https://andymantell.github.io/asteroids/
 
 ## Commands
 
